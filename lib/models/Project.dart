@@ -12,6 +12,11 @@ class Project {
 
 List<Project> projects = [
   Project(
+      title: "Asociarte App",
+      image: "assets/images/asociarteapp.jpeg",
+      description:
+          "Una app para una asociacion sin fines de lucro llamada Asociarte. En esta aplicacion tiene como objetivo el aprendizaje para todo público de los temas de matematicas de 1ro a 5to año de Bachillerato a través de Videos, Guías y Quizes. Actualmente se encuentra en fase de pruebas alfa."),
+  Project(
       title: "Pokedex App",
       image: "assets/images/pokedexapp.jpeg",
       description:

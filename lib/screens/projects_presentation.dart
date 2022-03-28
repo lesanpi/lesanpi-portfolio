@@ -33,7 +33,8 @@ class _ProjectsPresentationState extends State<ProjectsPresentation> {
               children: [
                 Expanded(
                   child: Padding(
-                    padding: const EdgeInsets.all(defaultPadding),
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: defaultPadding),
                     child: ValueListenableBuilder<int>(
                         valueListenable: _index,
                         builder: (context, index, _) {
@@ -52,17 +53,25 @@ class _ProjectsPresentationState extends State<ProjectsPresentation> {
                                       .headline4!
                                       .copyWith(
                                         fontWeight: FontWeight.bold,
-                                        color: Colors.white,
+                                        color: titleColor,
                                       ),
                                   key: ValueKey("${_index.value}-title"),
                                 ),
                                 const SizedBox(
                                   height: defaultPadding / 2,
                                 ),
-                                Text(
-                                  projects[index].description,
-                                  textAlign: TextAlign.justify,
-                                  style: Theme.of(context).textTheme.subtitle1!,
+                                Expanded(
+                                  flex: 7,
+                                  child: SingleChildScrollView(
+                                    scrollDirection: Axis.vertical,
+                                    child: Text(
+                                      projects[index].description,
+                                      textAlign: TextAlign.justify,
+                                      style: Theme.of(context)
+                                          .textTheme
+                                          .subtitle1!,
+                                    ),
+                                  ),
                                 ),
                                 Spacer(flex: 2),
                               ],

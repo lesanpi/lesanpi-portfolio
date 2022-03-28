@@ -11,8 +11,17 @@ const darkGreen = Color.fromARGB(255, 3, 151, 70);
 const primaryColor = Color(0xFFFFC107);
 const secondaryColor = Color(0xFF242430);
 const darkColor = Color(0xFF191923);
+
+const titleLightColor = Colors.black;
+const titleColor = Colors.white;
+
+const bodyLightTextColor = Color.fromARGB(248, 43, 43, 43);
 const bodyTextColor = Color(0xFF88B8B8D);
+
+const bgLightColor = Colors.white;
 const bgColor = Color(0xFF1e1e28);
+
+const secondLightBgColor = Color.fromARGB(255, 212, 212, 228);
 const secondBgColor = Color(0xFF242430);
 
 const defaultPadding = 20.0;

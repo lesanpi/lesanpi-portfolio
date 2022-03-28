@@ -9,52 +9,44 @@ class IntroBanner extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AspectRatio(
-      aspectRatio: 6,
-      child: Stack(
-        fit: StackFit.expand,
+    final size = MediaQuery.of(context).size;
+
+    return Padding(
+      padding: const EdgeInsets.symmetric(
+          horizontal: defaultPadding, vertical: defaultPadding),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          // Container(color: Colors.white10),
-          Padding(
-            padding: const EdgeInsets.symmetric(
-              horizontal: defaultPadding,
-            ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  "Discover my portfolio",
-                  style: Theme.of(context).textTheme.headline3!.copyWith(
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white,
-                      ),
+          Text(
+            "Discover my portfolio",
+            style: Theme.of(context).textTheme.headline3!.copyWith(
+                  fontWeight: FontWeight.bold,
+                  color: titleColor,
                 ),
-                DefaultTextStyle(
-                  style: Theme.of(context).textTheme.subtitle1!,
-                  child: Row(
-                    children: [
-                      Text("I make "),
-                      AnimatedTextKit(
-                        repeatForever: true,
-                        animatedTexts: [
-                          TyperAnimatedText("Mobile Development."),
-                          TyperAnimatedText("Web Development."),
-                          TyperAnimatedText("Data Scraping."),
-                          TyperAnimatedText("Databases."),
-                          TyperAnimatedText("Backend Development."),
-                          TyperAnimatedText("Frontend Development."),
-                          TyperAnimatedText("Dart and Flutter."),
-                          TyperAnimatedText("React and React Native."),
-                          TyperAnimatedText("Node.js and Express.js"),
-                        ],
-                      ),
-                    ],
-                  ),
+          ),
+          DefaultTextStyle(
+            style: Theme.of(context).textTheme.subtitle1!,
+            child: Row(
+              children: [
+                Text("I make "),
+                AnimatedTextKit(
+                  repeatForever: true,
+                  animatedTexts: [
+                    TyperAnimatedText("Mobile Development."),
+                    TyperAnimatedText("Web Development."),
+                    TyperAnimatedText("Data Scraping."),
+                    TyperAnimatedText("Databases."),
+                    TyperAnimatedText("Backend Development."),
+                    TyperAnimatedText("Frontend Development."),
+                    TyperAnimatedText("Dart and Flutter."),
+                    TyperAnimatedText("React and React Native."),
+                    TyperAnimatedText("Node.js and Express.js"),
+                  ],
                 ),
               ],
             ),
-          )
+          ),
         ],
       ),
     );
